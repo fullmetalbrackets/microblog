@@ -19,7 +19,7 @@
 		"@astrojs/rss": "^4.0.17",
 		"@astrojs/sitemap": "^3.7.1",
 		"@yeskunall/astro-umami": "^0.0.7",
-		"astro": "^5.16.14",
+		"astro": "^6.0.8",
 		"astro-embed": "^0.12.0",
 		"gab-astro-compress": "^0.1.2",
 		"rehype-external-links": "^3.0.0",
