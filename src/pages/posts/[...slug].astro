@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Post from '@components/Post.astro';
+import { SITE_TITLE } from '@consts';
+
+export async function getStaticPaths() {
+    const posts = (await getCollection('blog')).sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    );
+
+    return posts.map((post, index) => ({
+        params: { slug: post.id },
+        props: {
+            post,
+            prevPost: posts[index + 1] ?? null,  // older
+            nextPost: posts[index - 1] ?? null,  // newer
+        },
+    }));
+}
+
+const { post, prevPost, nextPost } = Astro.props;
+const { pubDate } = post.data;
+
+const dateStr = pubDate.toLocaleDateString('en-us', {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+});
+
+const pageTitle = `${SITE_TITLE} — ${dateStr}`;
+
+const pageDescription = (post.body ?? '')
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/\[([^\]]+)\]\(.*?\)/g, '$1')
+    .replace(/[#*`_~>]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 155);
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <nav aria-label="Breadcrumb">
+        <a href="/">← Back to all posts</a>
+    </nav>
+    <Post post={post} isPermalink={true} />
+    <nav class="posts-nav" aria-label="Post navigation">
+        {prevPost && (
+            <a href={`/posts/${prevPost.id}`} class="prev">← Previous Post</a>
+        )}
+        {nextPost && (
+            <a href={`/posts/${nextPost.id}`} class="next">Next Post →</a>
+        )}
+    </nav>
+</Layout>
+
+<style scoped>
+    nav {
+        font-family: var(--courier);
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+    .posts-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5em;
+        margin-bottom: 0;
+    }
+    .posts-nav .next {
+        margin-left: auto;
+    }
+</style>

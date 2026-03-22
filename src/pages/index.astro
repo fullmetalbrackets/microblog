@@ -1,0 +1,29 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Post from '@components/Post.astro';
+import { getCollection } from 'astro:content';
+import { SITE_DESCRIPTION, SITE_TITLE } from '@consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<style is:inline>
+    @media (prefers-reduced-motion: no-preference) {
+        body {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+</style>
+
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<ul role="feed" aria-label="Posts">
+		{posts.map((post, index) => (
+			<li>
+				<Post post={post} index={index} />
+			</li>
+		))}
+	</ul>
+</Layout>

@@ -1,0 +1,48 @@
+---
+const today = new Date();
+---
+<footer role="contentinfo">
+	<hr>
+	<span>
+		&copy; {today.getFullYear()} <a href="mailto:hello@arieldiaz.org" aria-label="Email me">ariel diaz</a>
+	</span>
+	<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" aria-label="Creative Commons BY-NC-SA 4.0 license (opens in new tab)">CC-BY-NC-SA 4.0</a><br>
+	<a href="/rss.xml" aria-label="Subscribe to RSS feed" class="green">Subscribe via RSS</a>
+</footer>
+<style>
+	footer {
+		padding: 1em;
+		text-align: center;
+		font-family: var(--anton);
+		font-size: 0.825em;
+		font-weight: 800;
+		margin: auto 0 0 0;
+	}
+	hr {
+		margin-bottom: 1em;
+	}
+	span {
+		display: flex;
+		place-items: center;
+		justify-content: center;
+	}
+	span a {
+		margin-left: 0.25em
+	}
+	span a, span a:visited {
+		color: var(--accent);
+		text-decoration: none;
+	}
+	span a:hover, span a:focus, span a:active {
+		color: var(--yellow);
+		text-decoration: underline;
+	}
+	a:last-of-type, a:visited:last-of-type {
+		color: var(--green);
+		text-decoration: none;
+	}
+	a:hover:last-of-type, a:focus:last-of-type, a:active:last-of-type {
+		color: var(--yellow);
+		text-decoration: underline;
+	}
+</style>

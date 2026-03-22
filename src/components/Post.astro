@@ -1,0 +1,158 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { SITE_URL } from '@consts';
+import FormattedDate from './FormattedDate.astro';
+
+type Props = {
+  post: CollectionEntry<'blog'>;
+  index?: number;
+  isPermalink?: boolean;
+};
+
+const { post, index = 0, isPermalink = false } = Astro.props;
+
+const { 
+    image,
+    alt,
+    pubDate
+} = post.data;
+
+const isAboveFold = index < 1;
+const { Content } = await render(post);
+---
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .content {
+        line-height: 1.2;
+        font-family: var(--bricolage);
+        font-weight: 300;
+        margin: 0 auto;
+        padding-bottom: 0;
+        border-bottom: 1px solid var(--gray-dark);
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 100%;
+    }
+    .info {
+        display: flex;
+        place-items: center;
+        justify-content: space-between;
+        font-family: var(--courier);
+        margin: 0;
+    }
+    a,
+    a:visited {
+        color: var(--green);
+        text-decoration: none;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+        color: var(--yellow);
+        text-decoration: underline;
+    }
+    a[target="_blank"]::after {
+        content: " ↗";
+    }
+    .image-wrapper {
+        position: relative;
+        overflow: hidden;
+        margin: 1em 0 0.5em 0;
+        width: 100%;
+        height: auto;
+    }
+    .image-wrapper img {
+        width: 100%;
+    }
+
+    /* date button (permalink page) */
+    button.post-date {
+        all: unset;
+        cursor: pointer;
+        font-family: var(--courier);
+    }
+    button.post-date:hover :global(time),
+    button.post-date:focus :global(time) {
+        color: var(--yellow);
+        text-decoration: underline;
+    }
+    button.post-date:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+    }
+
+    .copied-msg {
+        font-family: var(--courier);
+        font-size: 0.75em;
+        color: var(--green);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+    .copied-msg.visible {
+        opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .copied-msg {
+            transition: none;
+        }
+    }
+</style>
+
+<article>
+    {image && (
+        <div class="image-wrapper">
+            <Image src={image} alt={alt || ''} loading={isAboveFold ? 'eager' : 'lazy'} inferSize />
+        </div>
+    )}
+    <div class="content">
+        <Content />
+    </div>
+    <footer class="info">
+        {isPermalink ? (
+            <span class="date-wrapper">
+                <button
+                    class="post-date"
+                    data-url={`/posts/${post.id}/`}
+                    aria-label={`Copy link for post from ${pubDate.toLocaleDateString()}`}
+                >
+                    <FormattedDate date={pubDate} />
+                </button>
+                <span class="copied-msg" aria-live="polite">copied!</span>
+            </span>
+        ) : (
+            <a class="post-date" href={`/posts/${post.id}`} aria-label={`Permalink for post from ${pubDate.toLocaleDateString()}`}>
+                <FormattedDate date={pubDate} />
+            </a>
+        )}
+        <a
+            href={`https://shareopenly.org/share/?url=${SITE_URL}posts/${post.id}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Share this post (opens in new tab)"
+        >share</a>
+    </footer>
+</article>
+
+<script>
+    const btn = document.querySelector('button.post-date') as HTMLButtonElement | null;
+    if (btn) {
+        btn.addEventListener('click', async () => {
+            const url = new URL(btn.dataset.url!, window.location.origin).href;
+            await navigator.clipboard.writeText(url);
+            btn.blur();
+
+            const msg = btn.closest('.date-wrapper')?.querySelector('.copied-msg');
+            if (msg) {
+                msg.classList.add('visible');
+                setTimeout(() => msg.classList.remove('visible'), 2000);
+            }
+        });
+    }
+</script>

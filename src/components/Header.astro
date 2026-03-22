@@ -1,0 +1,88 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION, MASTODON_URL, BLUESKY_URL } from "@consts";
+import { Picture } from 'astro:assets';
+import Logo from '@assets/logo.avif';
+import Mastodon from '@assets/mastodon.svg';
+import Bluesky from '@assets/bluesky.svg';
+---
+
+<style>
+    header {
+        margin-bottom: 1em;
+    }
+    h1 {
+        color: #fff;
+        font-size: clamp(2.441em, 5vw, 3.052em);
+        line-height: 1;
+        text-align: center;
+        margin: 0.25em auto 0 auto;
+        margin-bottom: 0.075em;
+        filter: url(#distort)
+    }
+    h2 {
+        color: var(--gray-light);
+        font-weight: 200;
+        font-style: italic;
+        font-size: 0.625em;
+        text-align: center;
+        margin: -0.75em auto 0.75em auto;
+        font-family: var(--bricolage);
+    }
+    nav {
+        display: flex;
+        place-items: center;
+        justify-content: space-around;
+        gap: 1em;
+        margin: 0 auto 0.75em auto;
+        max-width: 250px;
+    }
+    img:hover, svg:hover {
+        animation: wiggle 0.5s ease-in-out infinite;
+    }
+    img:not(:hover), svg:not(:hover) {
+        animation: none;
+    }
+    hr {
+        margin: 0 1em;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        img:hover, svg:hover {
+            animation: none;
+    }
+}
+</style>
+
+
+<header role="banner">
+    <h1>{SITE_TITLE}</h1>
+    <h2>{SITE_DESCRIPTION}</h2>
+    <nav aria-label="External links">
+        <a href="/" rel="home" aria-label="Go to my Website (opens in new tab)" data-tooltip="My Website" data-umami-event="website">
+            <Picture src={Logo} formats={['avif', 'webp']} alt="website logo" width={32} height={29} loading="eager" decoding="async" aria-hidden="true" />
+        </a>
+        <a rel="me noreferrer noopener" aria-label="Go to my Mastodon (opens in new tab)" href={MASTODON_URL} target="_blank" data-umami-event="mastodon">
+            <Mastodon width={32} height={32} aria-hidden="true" />
+        </a>
+        <a rel="me atproto noreferrer noopener" aria-label="Go to my Bluesky (opens in new tab)" href={BLUESKY_URL} target="_blank" data-umami-event="bluesky">
+            <Bluesky width={32} height={32} aria-hidden="true" />
+        </a>
+    </nav>
+    <hr>
+    <svg width="0" height="0" class="svg_filter">
+        <defs>
+            <filter id="distort">
+            <feTurbulence 
+                type="turbulence" 
+                result="noise" 
+                numOctaves="1" 
+                baseFrequency="0.01 0.02"></feTurbulence>
+            <feDisplacementMap
+                in="SourceGraphic"
+                in2="noise"
+                scale="6"
+                xChannelSelector="R"
+                yChannelSelector="R"></feDisplacementMap>
+            </filter>
+        </defs>
+    </svg>
+</header>
