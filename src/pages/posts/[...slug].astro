@@ -41,20 +41,46 @@ const pageDescription = (post.body ?? '')
 
 <Layout title={pageTitle} description={pageDescription}>
     <nav aria-label="Breadcrumb">
-        <a href="/">← Back to all posts</a>
+        <a href="/" class="back"><svg class="c_c c_d c_e c_f c_cd" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M14 7.5H3.439l4.29-4.387-.714-.699L1.55 8l5.465 5.586.714-.7L3.44 8.5h10.56v-1z"></path></svg> Back to all posts</a>
     </nav>
     <Post post={post} isPermalink={true} />
     <nav class="posts-nav" aria-label="Post navigation">
         {prevPost && (
-            <a href={`/posts/${prevPost.id}`} class="prev">← Previous Post</a>
+            <a href={`/posts/${prevPost.id}`} class="prev"><svg class="c_c c_d c_e c_f c_cd" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M14 7.5H3.439l4.29-4.387-.714-.699L1.55 8l5.465 5.586.714-.7L3.44 8.5h10.56v-1z"></path></svg> Previous Post</a>
         )}
         {nextPost && (
-            <a href={`/posts/${nextPost.id}`} class="next">Next Post →</a>
+            <a href={`/posts/${nextPost.id}`} class="next">Next Post <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+    <path transform="scale(-1,1) translate(-16,0)" d="M14 7.5H3.439l4.29-4.387-.714-.699L1.55 8l5.465 5.586.714-.7L3.44 8.5h10.56v-1z"></path>
+</svg></a>
         )}
     </nav>
 </Layout>
 
 <style scoped>
+    nav a {
+        display: flex;
+        place-items: center;
+    }
+    a svg {
+        display: flex;
+        place-items: center;
+        width: 16px;
+        height: 16px;
+        fill: var(--yellow);
+    }
+    a:hover svg {
+        fill: var(--green);
+    }
+    .back svg, .prev svg {
+        margin-right: 0.25em;
+    }
+    .next svg {
+        margin-left: 0.25em;
+    }
+    svg path {
+        stroke: currentColor;
+        stroke-width: 1.0;
+    }
     nav {
         font-family: var(--courier);
         font-weight: 700;
