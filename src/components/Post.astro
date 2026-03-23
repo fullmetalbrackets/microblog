@@ -18,6 +18,7 @@ const {
     pubDate
 } = post.data;
 
+const isGif = image && image.format === 'gif';
 const isAboveFold = index < 1;
 const { Content } = await render(post);
 ---
@@ -112,7 +113,15 @@ const { Content } = await render(post);
 <article>
     {image && (
         <div class="image-wrapper">
-            <Image src={image} alt={alt || ''} loading={isAboveFold ? 'eager' : 'lazy'} inferSize />
+            {isGif ? (
+                <img
+                    src={typeof image === 'string' ? image : image.src}
+                    alt={alt || ''}
+                    loading={isAboveFold ? 'eager' : 'lazy'}
+                />
+            ) : (
+                <Image src={image} alt={alt || ''} loading={isAboveFold ? 'eager' : 'lazy'} inferSize />
+            )}
         </div>
     )}
     <div class="content">
