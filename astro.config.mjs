@@ -41,8 +41,7 @@ export default defineConfig({
 			destination: '/',
 		},
 	},
-	experimental: {
-		fonts: [
+			fonts: [
 			{
 				name: 'Bricolage Grotesque',
 				cssVariable: '--bricolage',
@@ -68,6 +67,7 @@ export default defineConfig({
 				subsets: ['latin'],
 			},
 		],
+	experimental: {
 		svgo: true,
 	},
 });
