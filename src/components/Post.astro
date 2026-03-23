@@ -59,6 +59,10 @@ const { Content } = await render(post);
     a[target="_blank"]::after {
         content: " ↗";
     }
+    a.post-date:hover :global(time),
+    a.post-date:focus :global(time) {
+        color: var(--yellow);
+    }
     .image-wrapper {
         position: relative;
         overflow: hidden;
