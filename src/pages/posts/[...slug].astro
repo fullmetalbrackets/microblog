@@ -13,13 +13,13 @@ export async function getStaticPaths() {
         params: { slug: post.id },
         props: {
             post,
-            prevPost: posts[index + 1] ?? null,  // older
-            nextPost: posts[index - 1] ?? null,  // newer
+            olderPost: posts[index + 1] ?? null,  // older
+            newerPost: posts[index - 1] ?? null,  // newer
         },
     }));
 }
 
-const { post, prevPost, nextPost } = Astro.props;
+const { post, olderPost, newerPost } = Astro.props;
 const { pubDate } = post.data;
 
 const dateStr = pubDate.toLocaleDateString('en-us', {
@@ -45,11 +45,11 @@ const pageDescription = (post.body ?? '')
     </nav>
     <Post post={post} isPermalink={true} />
     <nav class="posts-nav" aria-label="Post navigation">
-        {prevPost && (
-            <a href={`/posts/${prevPost.id}`} class="prev"><svg class="c_c c_d c_e c_f c_cd" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M14 7.5H3.439l4.29-4.387-.714-.699L1.55 8l5.465 5.586.714-.7L3.44 8.5h10.56v-1z"></path></svg> Previous Post</a>
+        {olderPost && (
+            <a href={`/posts/${olderPost.id}`} class="older"><svg class="c_c c_d c_e c_f c_cd" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M14 7.5H3.439l4.29-4.387-.714-.699L1.55 8l5.465 5.586.714-.7L3.44 8.5h10.56v-1z"></path></svg> Older</a>
         )}
-        {nextPost && (
-            <a href={`/posts/${nextPost.id}`} class="next">Next Post <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        {newerPost && (
+            <a href={`/posts/${newerPost.id}`} class="newer">Newer <svg role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
     <path transform="scale(-1,1) translate(-16,0)" d="M14 7.5H3.439l4.29-4.387-.714-.699L1.55 8l5.465 5.586.714-.7L3.44 8.5h10.56v-1z"></path>
 </svg></a>
         )}
@@ -71,10 +71,10 @@ const pageDescription = (post.body ?? '')
     a:hover svg {
         fill: var(--green);
     }
-    .back svg, .prev svg {
+    .back svg, .older svg {
         margin-right: 0.25em;
     }
-    .next svg {
+    .newer svg {
         margin-left: 0.25em;
     }
     svg path {
@@ -92,7 +92,7 @@ const pageDescription = (post.body ?? '')
         margin-top: 1em;
         margin-bottom: 0;
     }
-    .posts-nav .next {
+    .posts-nav .newer {
         margin-left: auto;
     }
 </style>

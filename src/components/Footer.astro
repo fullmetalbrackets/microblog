@@ -1,15 +1,15 @@
 ---
 const today = new Date();
 ---
-<footer role="contentinfo">
+<footer role="contentinfo" transition:persist>
 	<hr>
 	<span>
-		&copy; {today.getFullYear()} <a href="mailto:hello@arieldiaz.org" aria-label="Email me">ariel diaz</a>
+		&copy; {today.getFullYear()} <a href="mailto:hello@arieldiaz.org" aria-label="Email me">Ariel Diaz</a>
 	</span>
-	<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" aria-label="Creative Commons BY-NC-SA 4.0 license (opens in new tab)">CC-BY-NC-SA 4.0</a><br>
-	<a href="/rss.xml" aria-label="Subscribe to RSS feed" class="green">Subscribe via RSS</a>
+	<a href="/rss.xml" aria-label="Subscribe to RSS feed" class="green">Subscribe via RSS</a><br>
+	<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" aria-label="Creative Commons BY-NC-SA 4.0 license (opens in new tab)">CC-BY-NC-SA 4.0</a>
 </footer>
-<style>
+<style scoped>
 	footer {
 		padding: 1em;
 		text-align: center;
@@ -30,19 +30,16 @@ const today = new Date();
 		margin-left: 0.25em
 	}
 	span a, span a:visited {
-		color: var(--accent);
+		color: var(--pink);
 		text-decoration: none;
 	}
 	span a:hover, span a:focus, span a:active {
 		color: var(--yellow);
-		text-decoration: underline;
 	}
-	a:last-of-type, a:visited:last-of-type {
+	a, a:visited {
 		color: var(--green);
-		text-decoration: none;
 	}
-	a:hover:last-of-type, a:focus:last-of-type, a:active:last-of-type {
+	a:hover, a:focus, a:active {
 		color: var(--yellow);
-		text-decoration: underline;
 	}
 </style>

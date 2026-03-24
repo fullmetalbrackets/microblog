@@ -9,15 +9,6 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<style is:inline>
-    @media (prefers-reduced-motion: no-preference) {
-        body {
-            visibility: hidden;
-            opacity: 0;
-        }
-    }
-</style>
-
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<ul role="feed" aria-label="Posts">
 		{posts.map((post, index) => (
