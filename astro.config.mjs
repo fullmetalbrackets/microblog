@@ -18,7 +18,10 @@ export default defineConfig({
 		mdx(),
 		sitemap(),
 		astroCompress(),
-		yeskunallumami({ id: '5267ef5d-2c51-421e-bdc1-fd53fe5de091' }),
+		yeskunallumami({
+			id: '5267ef5d-2c51-421e-bdc1-fd53fe5de091',
+			hostUrl: 'https://u.adiaz.fyi',
+		}),
 	],
 	markdown: {
 		rehypePlugins: [
@@ -41,32 +44,32 @@ export default defineConfig({
 			destination: '/',
 		},
 	},
-			fonts: [
-			{
-				name: 'Bricolage Grotesque',
-				cssVariable: '--bricolage',
-				provider: fontProviders.fontsource(),
-				weights: [200, 300, 400, 500, 600, 700, 800],
-				styles: ['normal', 'italic'],
-				subsets: ['latin'],
-			},
-			// {
-			// 	name: 'Figtree',
-			// 	cssVariable: '--figtree',
-			// 	provider: fontProviders.fontsource(),
-			// 	weights: [300, 400, 500, 600, 700, 800, 900],
-			// 	styles: ['normal', 'italic'],
-			// 	subsets: ['latin'],
-			// },
-			{
-				name: 'Courier Prime',
-				cssVariable: '--courier',
-				provider: fontProviders.fontsource(),
-				weights: [400, 700],
-				styles: ['normal', 'italic'],
-				subsets: ['latin'],
-			},
-		],
+	fonts: [
+		{
+			name: 'Bricolage Grotesque',
+			cssVariable: '--bricolage',
+			provider: fontProviders.fontsource(),
+			weights: [200, 300, 400, 500, 600, 700, 800],
+			styles: ['normal', 'italic'],
+			subsets: ['latin'],
+		},
+		// {
+		// 	name: 'Figtree',
+		// 	cssVariable: '--figtree',
+		// 	provider: fontProviders.fontsource(),
+		// 	weights: [300, 400, 500, 600, 700, 800, 900],
+		// 	styles: ['normal', 'italic'],
+		// 	subsets: ['latin'],
+		// },
+		{
+			name: 'Courier Prime',
+			cssVariable: '--courier',
+			provider: fontProviders.fontsource(),
+			weights: [400, 700],
+			styles: ['normal', 'italic'],
+			subsets: ['latin'],
+		},
+	],
 	experimental: {
 		svgo: true,
 	},
