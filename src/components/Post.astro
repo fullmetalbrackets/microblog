@@ -99,7 +99,6 @@ const { Content } = await render(post);
         color: var(--pink);
         padding: 0;
         font-size: 0.75em;
-        margin-left: 0.25em;
     }
     button.post-date:hover :global(time),
     button.post-date:focus :global(time) {
@@ -134,7 +133,14 @@ const { Content } = await render(post);
     }
     @media screen and (max-width: 667px) {
         .share {
-            margin-left: -1em;
+            margin-left: -2em;
+        }
+        button.post-date::after {
+            font-size: 16px;
+        }
+        a[target="_blank"]::after {
+            width: 14px;
+            height: 14px;
         }
     }
 
