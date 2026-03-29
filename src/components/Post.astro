@@ -18,7 +18,11 @@ const {
     pubDate
 } = post.data;
 
-const isGif = image && image.format === 'gif';
+const isGif = image && (
+  typeof image === 'string'
+    ? image.endsWith('.gif')
+    : image.format === 'gif'
+);
 const isAboveFold = index < 1;
 const { Content } = await render(post);
 ---
@@ -149,17 +153,17 @@ const { Content } = await render(post);
 
 <article>
     {image && (
-        <div class="image-wrapper">
-            {isGif ? (
-                <img
-                    src={typeof image === 'string' ? image : image.src}
-                    alt={alt || ''}
-                    loading={isAboveFold ? 'eager' : 'lazy'}
-                />
-            ) : (
-                <Image src={image} alt={alt || ''} loading={isAboveFold ? 'eager' : 'lazy'} inferSize />
-            )}
-        </div>
+    <div class="image-wrapper">
+        {isGif || typeof image === 'string' ? (
+        <img
+            src={typeof image === 'string' ? image : image.src}
+            alt={alt || ''}
+            loading={isAboveFold ? 'eager' : 'lazy'}
+        />
+        ) : (
+        <Image src={image} alt={alt || ''} loading={isAboveFold ? 'eager' : 'lazy'} inferSize />
+        )}
+    </div>
     )}
     <div class="content" transition:name={`post-${post.id}`}>
         <Content />
