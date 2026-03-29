@@ -58,7 +58,7 @@ export async function GET(context) {
 				title: dateTitle,
 				description: SITE_DESCRIPTION,
 				content: imageHtml + html,
-				link: `/blog/${post.id}/`,
+				link: `/posts/${post.id}/`,
 				pubDate: new Date(post.data.pubDate),
 				...(imageUrl && {
 					enclosure: {
