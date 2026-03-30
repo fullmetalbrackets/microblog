@@ -72,10 +72,20 @@ const pageDescription = (post.body ?? '')
         fill: var(--green);
     }
     .back svg, .older svg {
+        transition: all .1s ease-in-out;
         margin-right: 0.25em;
     }
+    .back:hover svg, .older:hover svg {
+        transition: all .1s ease-in-out;
+        transform: translateX(-4px);
+    }
     .newer svg {
+        transition: all .1s ease-in-out;        
         margin-left: 0.25em;
+    }
+    .newer:hover svg {
+        transition: all .1s ease-in-out;
+        transform: translateX(4px);
     }
     svg path {
         stroke: currentColor;
