@@ -25,7 +25,7 @@
 		"marked": "^18.0.0",
 		"rehype-external-links": "^3.0.0",
 		"sharp": "^0.34.3",
-		"typescript": "^6.0.2"
+		"typescript": "^6.0.3"
 	},
 	"packageManager": "yarn@4.12.0"
 }
