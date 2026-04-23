@@ -145,6 +145,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/internal-helpers@npm:0.9.0":
+  version: 0.9.0
+  resolution: "@astrojs/internal-helpers@npm:0.9.0"
+  dependencies:
+    picomatch: "npm:^4.0.4"
+  checksum: 10c0/6513b28955d1d4fe250c2978e0496d1a5b72be0a19db427e475bc31930d1704cdea63f67862eefd046d480aa7f1fb775b14e143e66ef70eabf187f17655d0047
+  languageName: node
+  linkType: hard
+
 "@astrojs/language-server@npm:^2.16.5":
   version: 2.16.6
   resolution: "@astrojs/language-server@npm:2.16.6"
@@ -210,6 +219,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/markdown-remark@npm:7.1.1":
+  version: 7.1.1
+  resolution: "@astrojs/markdown-remark@npm:7.1.1"
+  dependencies:
+    "@astrojs/internal-helpers": "npm:0.9.0"
+    "@astrojs/prism": "npm:4.0.1"
+    github-slugger: "npm:^2.0.0"
+    hast-util-from-html: "npm:^2.0.3"
+    hast-util-to-text: "npm:^4.0.2"
+    js-yaml: "npm:^4.1.1"
+    mdast-util-definitions: "npm:^6.0.0"
+    rehype-raw: "npm:^7.0.0"
+    rehype-stringify: "npm:^10.0.1"
+    remark-gfm: "npm:^4.0.1"
+    remark-parse: "npm:^11.0.0"
+    remark-rehype: "npm:^11.1.2"
+    remark-smartypants: "npm:^3.0.2"
+    retext-smartypants: "npm:^6.2.0"
+    shiki: "npm:^4.0.0"
+    smol-toml: "npm:^1.6.0"
+    unified: "npm:^11.0.5"
+    unist-util-remove-position: "npm:^5.0.0"
+    unist-util-visit: "npm:^5.1.0"
+    unist-util-visit-parents: "npm:^6.0.2"
+    vfile: "npm:^6.0.3"
+  checksum: 10c0/f64f8900008aa9b2ba0d574c1f2a34a9cf82192c28d3b19a8b157738bbff721424b50d16aa0d67e3d98cbfc1581c3b3b6f0029d66d449d0ebba2c7c7612afc5c
+  languageName: node
+  linkType: hard
+
 "@astrojs/mdx@npm:^5.0.3":
   version: 5.0.3
   resolution: "@astrojs/mdx@npm:5.0.3"
@@ -264,18 +302,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/telemetry@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@astrojs/telemetry@npm:3.3.0"
+"@astrojs/telemetry@npm:3.3.1":
+  version: 3.3.1
+  resolution: "@astrojs/telemetry@npm:3.3.1"
   dependencies:
-    ci-info: "npm:^4.2.0"
-    debug: "npm:^4.4.0"
+    ci-info: "npm:^4.4.0"
     dlv: "npm:^1.1.3"
     dset: "npm:^3.1.4"
-    is-docker: "npm:^3.0.0"
-    is-wsl: "npm:^3.1.0"
+    is-docker: "npm:^4.0.0"
+    is-wsl: "npm:^3.1.1"
     which-pm-runs: "npm:^1.1.0"
-  checksum: 10c0/7c575aad221d7335b6b1378ceac0e60a25c9540cdde8f5584b0ffe565d06b3ecfc2217738d1ce55ac13eb66e1a6251453bddf117d7f793e51b3fc7be5d001ea4
+  checksum: 10c0/4ce5a73808be3ebb0d5f73a36849fe69a716eef2f7c1e5d1ce879f9995e6aecca0ab0f3d2b53b6636a0f587ecde20132313238169541b004c3451cea60c5013d
   languageName: node
   linkType: hard
 
@@ -1697,14 +1734,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "astro@npm:6.1.5"
+"astro@npm:^6.1.9":
+  version: 6.1.9
+  resolution: "astro@npm:6.1.9"
   dependencies:
     "@astrojs/compiler": "npm:^3.0.1"
-    "@astrojs/internal-helpers": "npm:0.8.0"
-    "@astrojs/markdown-remark": "npm:7.1.0"
-    "@astrojs/telemetry": "npm:3.3.0"
+    "@astrojs/internal-helpers": "npm:0.9.0"
+    "@astrojs/markdown-remark": "npm:7.1.1"
+    "@astrojs/telemetry": "npm:3.3.1"
     "@capsizecss/unpack": "npm:^4.0.0"
     "@clack/prompts": "npm:^1.1.0"
     "@oslojs/encoding": "npm:^1.1.0"
@@ -1735,7 +1772,7 @@ __metadata:
     p-queue: "npm:^9.1.0"
     package-manager-detector: "npm:^1.6.0"
     piccolore: "npm:^0.1.3"
-    picomatch: "npm:^4.0.3"
+    picomatch: "npm:^4.0.4"
     rehype: "npm:^13.0.2"
     semver: "npm:^7.7.4"
     sharp: "npm:^0.34.0"
@@ -1749,9 +1786,9 @@ __metadata:
     ultrahtml: "npm:^1.6.0"
     unifont: "npm:~0.7.4"
     unist-util-visit: "npm:^5.1.0"
-    unstorage: "npm:^1.17.4"
+    unstorage: "npm:^1.17.5"
     vfile: "npm:^6.0.3"
-    vite: "npm:^7.3.1"
+    vite: "npm:^7.3.2"
     vitefu: "npm:^1.1.2"
     xxhash-wasm: "npm:^1.1.0"
     yargs-parser: "npm:^22.0.0"
@@ -1761,7 +1798,7 @@ __metadata:
       optional: true
   bin:
     astro: bin/astro.mjs
-  checksum: 10c0/f853234dcf65ed2c8546a781974197f3059c7855189f0aa226a2f78ae808368753c2bb26ca9de5801b5e95af751b057d9d725f0b0aef5eeb1f44b73f80c9bd06
+  checksum: 10c0/bacb7dab6a0b0c5727a7f3247b8527e7043756bbfda5103e9efb60cef697be4c8d26185d4d3a5ab8cb8415ff4a8b5ab4cff0b2eab43f0cc9aac20389ba667dda
   languageName: node
   linkType: hard
 
@@ -1911,7 +1948,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^4.2.0, ci-info@npm:^4.4.0":
+"ci-info@npm:^4.4.0":
   version: 4.4.0
   resolution: "ci-info@npm:4.4.0"
   checksum: 10c0/44156201545b8dde01aa8a09ee2fe9fc7a73b1bef9adbd4606c9f61c8caeeb73fb7a575c88b0443f7b4edb5ee45debaa59ed54ba5f99698339393ca01349eb3a
@@ -2010,10 +2047,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie-es@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "cookie-es@npm:1.2.2"
-  checksum: 10c0/210eb67cd40a53986fda99d6f47118cfc45a69c4abc03490d15ab1b83ac978d5518356aecdd7a7a4969292445e3063c2302deda4c73706a67edc008127608638
+"cookie-es@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "cookie-es@npm:1.2.3"
+  checksum: 10c0/429eae6f5130a7380ea024d787d7e1ecc644ca84f9c43dfb70f18761a831d2ba591d28f837ce350892cfff0857d711f3a4ad93a082637bceb478823c339c1a97
   languageName: node
   linkType: hard
 
@@ -2099,7 +2136,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.3.4, debug@npm:^4.4.0":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.3.4":
   version: 4.4.3
   resolution: "debug@npm:4.4.3"
   dependencies:
@@ -2120,10 +2157,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"defu@npm:^6.1.4":
-  version: 6.1.6
-  resolution: "defu@npm:6.1.6"
-  checksum: 10c0/6755a914d4d1b40346d582cadf3af0c4efb1b89c462631f4c8a20c933da88d5da674344dd0856426d611d5fc0c65a3ffa82388519127b06f1a688dc103ddf5ba
+"defu@npm:^6.1.6":
+  version: 6.1.7
+  resolution: "defu@npm:6.1.7"
+  checksum: 10c0/e6635388103c8be3c574ac31302f6930e5e6eeedba32cb1b30cf993c7d9fb571aec2485446dfa23bfa63e55e66156fe109027a9695db82a50f931e91e8d4bedb
   languageName: node
   linkType: hard
 
@@ -2648,20 +2685,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:^1.15.5":
-  version: 1.15.10
-  resolution: "h3@npm:1.15.10"
+"h3@npm:^1.15.10":
+  version: 1.15.11
+  resolution: "h3@npm:1.15.11"
   dependencies:
-    cookie-es: "npm:^1.2.2"
+    cookie-es: "npm:^1.2.3"
     crossws: "npm:^0.3.5"
-    defu: "npm:^6.1.4"
+    defu: "npm:^6.1.6"
     destr: "npm:^2.0.5"
     iron-webcrypto: "npm:^1.2.1"
     node-mock-http: "npm:^1.0.4"
     radix3: "npm:^1.1.2"
     ufo: "npm:^1.6.3"
     uncrypto: "npm:^0.1.3"
-  checksum: 10c0/5eec10ea46905e36fdc645b359367f159a316e3e5cc00d0fd13e63db9c5b9793e6c0b65b77daa27339a95ad5837b35920533a4e4556349d256faa04a749ba1b0
+  checksum: 10c0/6ccb421b9f92e02e6330c2b6697b18ef18e9550e4a1708f224ca517c40ecd201cd00967d0feb26e718595e86e985edec1755933cf8792d34fb8504f1c7cc261d
   languageName: node
   linkType: hard
 
@@ -2977,6 +3014,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-docker@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "is-docker@npm:4.0.0"
+  bin:
+    is-docker: cli.js
+  checksum: 10c0/4ee05c305b545422b172cab17f42900b940a5fa77820380d3244784fde69279d6881305f249b3b7fa2e261c2294804100548f5638880842e5b43df72cec29087
+  languageName: node
+  linkType: hard
+
 "is-fullwidth-code-point@npm:^3.0.0":
   version: 3.0.0
   resolution: "is-fullwidth-code-point@npm:3.0.0"
@@ -3009,7 +3055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-wsl@npm:^3.1.0":
+"is-wsl@npm:^3.1.1":
   version: 3.1.1
   resolution: "is-wsl@npm:3.1.1"
   dependencies:
@@ -3094,10 +3140,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^11.0.0, lru-cache@npm:^11.1.0, lru-cache@npm:^11.2.0, lru-cache@npm:^11.2.1":
+"lru-cache@npm:^11.0.0, lru-cache@npm:^11.1.0, lru-cache@npm:^11.2.1":
   version: 11.2.7
   resolution: "lru-cache@npm:11.2.7"
   checksum: 10c0/549cdb59488baa617135fc12159cafb1a97f91079f35093bb3bcad72e849fc64ace636d244212c181dfdf1a99bbfa90757ff303f98561958ee4d0f885d9bd5f7
+  languageName: node
+  linkType: hard
+
+"lru-cache@npm:^11.2.7":
+  version: 11.3.5
+  resolution: "lru-cache@npm:11.3.5"
+  checksum: 10c0/5b54ef7b88afb4bd25b7a778f1b2b1cde32d9770913e530da34ab203cf0442413bcaa6e372800cbab9562557a4480e4d8bf32e3a368bb5a91b12218eca085c66
   languageName: node
   linkType: hard
 
@@ -3428,7 +3481,7 @@ __metadata:
     "@astrojs/rss": "npm:^4.0.18"
     "@astrojs/sitemap": "npm:^3.7.2"
     "@yeskunall/astro-umami": "npm:^0.0.7"
-    astro: "npm:^6.1.5"
+    astro: "npm:^6.1.9"
     astro-embed: "npm:^0.12.0"
     gab-astro-compress: "npm:^0.1.2"
     marked: "npm:^18.0.0"
@@ -4290,6 +4343,13 @@ __metadata:
   version: 4.0.3
   resolution: "picomatch@npm:4.0.3"
   checksum: 10c0/9582c951e95eebee5434f59e426cddd228a7b97a0161a375aed4be244bd3fe8e3a31b846808ea14ef2c8a2527a6eeab7b3946a67d5979e81694654f939473ae2
+  languageName: node
+  linkType: hard
+
+"picomatch@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "picomatch@npm:4.0.4"
+  checksum: 10c0/e2c6023372cc7b5764719a5ffb9da0f8e781212fa7ca4bd0562db929df8e117460f00dff3cb7509dacfc06b86de924b247f504d0ce1806a37fac4633081466b0
   languageName: node
   linkType: hard
 
@@ -5388,15 +5448,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unstorage@npm:^1.17.4":
-  version: 1.17.4
-  resolution: "unstorage@npm:1.17.4"
+"unstorage@npm:^1.17.5":
+  version: 1.17.5
+  resolution: "unstorage@npm:1.17.5"
   dependencies:
     anymatch: "npm:^3.1.3"
     chokidar: "npm:^5.0.0"
     destr: "npm:^2.0.5"
-    h3: "npm:^1.15.5"
-    lru-cache: "npm:^11.2.0"
+    h3: "npm:^1.15.10"
+    lru-cache: "npm:^11.2.7"
     node-fetch-native: "npm:^1.6.7"
     ofetch: "npm:^1.5.1"
     ufo: "npm:^1.6.3"
@@ -5459,7 +5519,7 @@ __metadata:
       optional: true
     uploadthing:
       optional: true
-  checksum: 10c0/200e9f8e26545b7e1db5c91941d211d2e27f54d3615d746a5c9ee8294bdfdbbb6d7c50478a8a0ce45920eaae1d07429b3f5754e1c87f2e740f40fe3ae5da94a2
+  checksum: 10c0/52bc07d0951129f493cc2d2a5204f49df90c85e7ab3faac0019e3a31f22f507f7a8263fca7ca4d019950c14cbfed4d43e15c9afe4b5dcb307249ebb60d2e538e
   languageName: node
   linkType: hard
 
@@ -5493,7 +5553,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^7.3.1":
+"vite@npm:^7.3.2":
   version: 7.3.2
   resolution: "vite@npm:7.3.2"
   dependencies:
