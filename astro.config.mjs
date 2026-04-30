@@ -2,7 +2,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import yeskunallumami from '@yeskunall/astro-umami';
 import rehypeExternalLinks from 'rehype-external-links';
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, fontProviders, svgoOptimizer } from 'astro/config';
 import astroCompress from 'gab-astro-compress';
 
 export default defineConfig({
@@ -71,6 +71,6 @@ export default defineConfig({
 		},
 	],
 	experimental: {
-		svgo: true,
+		svgoOptimizer: true,
 	},
 });
