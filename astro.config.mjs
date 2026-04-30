@@ -71,6 +71,6 @@ export default defineConfig({
 		},
 	],
 	experimental: {
-		svgoOptimizer: true,
+		svgOptimizer: svgoOptimizer(),
 	},
 });
