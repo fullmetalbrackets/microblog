@@ -11,9 +11,6 @@ export default defineConfig({
 	build: {
 		inlineStylesheets: 'always',
 	},
-	experimental: {
-		svgOptimizer: svgOptimizer(),
-	},
 	integrations: [
 		mdx(),
 		sitemap(),
