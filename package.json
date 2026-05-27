@@ -17,7 +17,7 @@
 		"@astrojs/check": "^0.9.9",
 		"@astrojs/mdx": "^5.0.4",
 		"@astrojs/rss": "^4.0.18",
-		"@astrojs/sitemap": "^3.7.2",
+		"@astrojs/sitemap": "^3.7.3",
 		"@yeskunall/astro-umami": "^0.0.8",
 		"astro": "^6.2.1",
 		"astro-embed": "^0.13.0",
