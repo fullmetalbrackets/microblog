@@ -156,15 +156,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:0.9.0":
-  version: 0.9.0
-  resolution: "@astrojs/internal-helpers@npm:0.9.0"
-  dependencies:
-    picomatch: "npm:^4.0.4"
-  checksum: 10c0/6513b28955d1d4fe250c2978e0496d1a5b72be0a19db427e475bc31930d1704cdea63f67862eefd046d480aa7f1fb775b14e143e66ef70eabf187f17655d0047
-  languageName: node
-  linkType: hard
-
 "@astrojs/language-server@npm:^2.16.7":
   version: 2.16.7
   resolution: "@astrojs/language-server@npm:2.16.7"
@@ -201,35 +192,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@astrojs/markdown-remark@npm:7.1.1"
-  dependencies:
-    "@astrojs/internal-helpers": "npm:0.9.0"
-    "@astrojs/prism": "npm:4.0.1"
-    github-slugger: "npm:^2.0.0"
-    hast-util-from-html: "npm:^2.0.3"
-    hast-util-to-text: "npm:^4.0.2"
-    js-yaml: "npm:^4.1.1"
-    mdast-util-definitions: "npm:^6.0.0"
-    rehype-raw: "npm:^7.0.0"
-    rehype-stringify: "npm:^10.0.1"
-    remark-gfm: "npm:^4.0.1"
-    remark-parse: "npm:^11.0.0"
-    remark-rehype: "npm:^11.1.2"
-    remark-smartypants: "npm:^3.0.2"
-    retext-smartypants: "npm:^6.2.0"
-    shiki: "npm:^4.0.0"
-    smol-toml: "npm:^1.6.0"
-    unified: "npm:^11.0.5"
-    unist-util-remove-position: "npm:^5.0.0"
-    unist-util-visit: "npm:^5.1.0"
-    unist-util-visit-parents: "npm:^6.0.2"
-    vfile: "npm:^6.0.3"
-  checksum: 10c0/f64f8900008aa9b2ba0d574c1f2a34a9cf82192c28d3b19a8b157738bbff721424b50d16aa0d67e3d98cbfc1581c3b3b6f0029d66d449d0ebba2c7c7612afc5c
-  languageName: node
-  linkType: hard
-
 "@astrojs/markdown-remark@npm:7.2.0":
   version: 7.2.0
   resolution: "@astrojs/markdown-remark@npm:7.2.0"
@@ -255,11 +217,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:^5.0.4":
-  version: 5.0.4
-  resolution: "@astrojs/mdx@npm:5.0.4"
+"@astrojs/mdx@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "@astrojs/mdx@npm:6.0.1"
   dependencies:
-    "@astrojs/markdown-remark": "npm:7.1.1"
+    "@astrojs/internal-helpers": "npm:0.10.0"
+    "@astrojs/markdown-remark": "npm:7.2.0"
     "@mdx-js/mdx": "npm:^3.1.1"
     acorn: "npm:^8.16.0"
     es-module-lexer: "npm:^2.0.0"
@@ -273,17 +236,12 @@ __metadata:
     unist-util-visit: "npm:^5.1.0"
     vfile: "npm:^6.0.3"
   peerDependencies:
-    astro: ^6.0.0
-  checksum: 10c0/233d98b978b261dc38e765999806b2bdf3a780d23f5aa6dfcec6ab2db511f9d37a3805136c8688a440461b82028eea64eabe13e7458a8fbc5cfe4f611a905e02
-  languageName: node
-  linkType: hard
-
-"@astrojs/prism@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@astrojs/prism@npm:4.0.1"
-  dependencies:
-    prismjs: "npm:^1.30.0"
-  checksum: 10c0/e4d1513e3f665e1fc2267db474e363ac6a86c29fcb668d32413723826dec32d007de616f1f3df9be219f4226e271e83d9492e7810d26c5b4cf7c8ca18de484a5
+    "@astrojs/markdown-satteri": 0.2.1
+    astro: ^6.4.0
+  peerDependenciesMeta:
+    "@astrojs/markdown-satteri":
+      optional: true
+  checksum: 10c0/7a19232fa64170bb0239ead0fec72307deb831c0f5b8f90eccb299d68c658231e06e8f9cec1b0144ac2427e1be95b422a26ccf9e351bcc088040796da63d0499
   languageName: node
   linkType: hard
 
@@ -3487,7 +3445,7 @@ __metadata:
   resolution: "microblog@workspace:."
   dependencies:
     "@astrojs/check": "npm:^0.9.9"
-    "@astrojs/mdx": "npm:^5.0.4"
+    "@astrojs/mdx": "npm:^6.0.1"
     "@astrojs/rss": "npm:^4.0.18"
     "@astrojs/sitemap": "npm:^3.7.3"
     "@yeskunall/astro-umami": "npm:^0.0.8"
@@ -4919,7 +4877,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:^4.0.0, shiki@npm:^4.0.2":
+"shiki@npm:^4.0.2":
   version: 4.0.2
   resolution: "shiki@npm:4.0.2"
   dependencies:
