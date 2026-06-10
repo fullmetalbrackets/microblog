@@ -1546,12 +1546,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yeskunall/astro-umami@npm:^0.0.8":
-  version: 0.0.8
-  resolution: "@yeskunall/astro-umami@npm:0.0.8"
+"@yeskunall/astro-umami@npm:^0.0.9":
+  version: 0.0.9
+  resolution: "@yeskunall/astro-umami@npm:0.0.9"
   peerDependencies:
     astro: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
-  checksum: 10c0/2640b164050aef0293a6a19490880581835e8e6e5c4f10f96d5be56901f92daa4480907675807d8527b1a05fc05490f2cb5511678cc11fb21f820650c79e1e50
+  checksum: 10c0/fdd863c0dea16af13ed144657a9b7dd821a8f3ce714f6bcfa10e64fb5d0282b9d4218fd95c495540710a19b650a52f17f80e48b35c32605159b1065527e8a4b6
   languageName: node
   linkType: hard
 
@@ -3448,7 +3448,7 @@ __metadata:
     "@astrojs/mdx": "npm:^6.0.1"
     "@astrojs/rss": "npm:^4.0.18"
     "@astrojs/sitemap": "npm:^3.7.3"
-    "@yeskunall/astro-umami": "npm:^0.0.8"
+    "@yeskunall/astro-umami": "npm:^0.0.9"
     astro: "npm:^6.4.2"
     astro-embed: "npm:^0.13.0"
     gab-astro-compress: "npm:^0.1.2"
