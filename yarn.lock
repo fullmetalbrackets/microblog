@@ -1704,9 +1704,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^6.4.2":
-  version: 6.4.2
-  resolution: "astro@npm:6.4.2"
+"astro@npm:^6.4.6":
+  version: 6.4.6
+  resolution: "astro@npm:6.4.6"
   dependencies:
     "@astrojs/compiler": "npm:^4.0.0"
     "@astrojs/internal-helpers": "npm:0.10.0"
@@ -1722,7 +1722,7 @@ __metadata:
     clsx: "npm:^2.1.1"
     common-ancestor-path: "npm:^2.0.0"
     cookie: "npm:^1.1.1"
-    devalue: "npm:^5.6.3"
+    devalue: "npm:^5.8.1"
     diff: "npm:^8.0.3"
     dset: "npm:^3.1.4"
     es-module-lexer: "npm:^2.0.0"
@@ -1769,7 +1769,7 @@ __metadata:
       optional: true
   bin:
     astro: ./bin/astro.mjs
-  checksum: 10c0/33554d3c5d91d20dc493cd7e12340d5f3ce5f19c543466ab6751e58b2b2d55af81ceafcfcd2c552c03f254131273ffd388291d3cb3409168466461a3a9560a02
+  checksum: 10c0/f66c80e88aa5338a7ed9dde2adb09e0fe7b1bad1bc1e282fb24cbbfd9b54727d16f06550e1870ee90532d1f638d47956fafaca8a7143e4d3ea466778da510777
   languageName: node
   linkType: hard
 
@@ -2149,7 +2149,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devalue@npm:^5.6.3":
+"devalue@npm:^5.8.1":
   version: 5.8.1
   resolution: "devalue@npm:5.8.1"
   checksum: 10c0/fad0c5aeb615e0ddea3385923389991652b285cd2adcd84e10f07a930f735127d94621751f7ef5249a7fe2c7c666ec7c02bb95c3901da337c91f45ef4da18dea
@@ -3449,7 +3449,7 @@ __metadata:
     "@astrojs/rss": "npm:^4.0.18"
     "@astrojs/sitemap": "npm:^3.7.3"
     "@yeskunall/astro-umami": "npm:^0.0.8"
-    astro: "npm:^6.4.2"
+    astro: "npm:^6.4.6"
     astro-embed: "npm:^0.13.0"
     gab-astro-compress: "npm:^0.1.2"
     marked: "npm:^18.0.4"
