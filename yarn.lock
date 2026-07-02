@@ -217,9 +217,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "@astrojs/mdx@npm:6.0.1"
+"@astrojs/mdx@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "@astrojs/mdx@npm:7.0.1"
   dependencies:
     "@astrojs/internal-helpers": "npm:0.10.0"
     "@astrojs/markdown-remark": "npm:7.2.0"
@@ -236,12 +236,12 @@ __metadata:
     unist-util-visit: "npm:^5.1.0"
     vfile: "npm:^6.0.3"
   peerDependencies:
-    "@astrojs/markdown-satteri": 0.2.1
-    astro: ^6.4.0
+    "@astrojs/markdown-satteri": ^0.3.1
+    astro: ^7.0.0
   peerDependenciesMeta:
     "@astrojs/markdown-satteri":
       optional: true
-  checksum: 10c0/7a19232fa64170bb0239ead0fec72307deb831c0f5b8f90eccb299d68c658231e06e8f9cec1b0144ac2427e1be95b422a26ccf9e351bcc088040796da63d0499
+  checksum: 10c0/f70dd0a6bf34b4001069b4149097e75b17e96fcb20e77bf934e016caf4ebd1019883f502cba6e1f7b2a8615d8e2c158d945f6cbe5f7f0a46734452b3309ef5a3
   languageName: node
   linkType: hard
 
@@ -3445,7 +3445,7 @@ __metadata:
   resolution: "microblog@workspace:."
   dependencies:
     "@astrojs/check": "npm:^0.9.9"
-    "@astrojs/mdx": "npm:^6.0.1"
+    "@astrojs/mdx": "npm:^7.0.1"
     "@astrojs/rss": "npm:^4.0.18"
     "@astrojs/sitemap": "npm:^3.7.3"
     "@yeskunall/astro-umami": "npm:^0.0.8"
