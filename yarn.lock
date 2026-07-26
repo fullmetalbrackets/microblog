@@ -3986,7 +3986,6 @@ __metadata:
     gab-astro-compress: "npm:^0.1.2"
     marked: "npm:^18.0.6"
     rehype-external-links: "npm:^3.0.0"
-    sharp: "npm:^0.35.3"
     typescript: "npm:^6.0.3"
   languageName: unknown
   linkType: soft
@@ -5326,7 +5325,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.34.0 || ^0.35.0, sharp@npm:^0.35.3":
+"sharp@npm:^0.34.0 || ^0.35.0":
   version: 0.35.3
   resolution: "sharp@npm:0.35.3"
   dependencies:
