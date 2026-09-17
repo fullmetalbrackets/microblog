@@ -73,6 +73,9 @@ p {
 mark {
 	color: var(--green);
 }
+sub, sup {
+	font-size: 0.666667em;
+}
 strong,
 b {
 	font-weight: 700;
