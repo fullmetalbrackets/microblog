@@ -14,17 +14,17 @@
 		"mdx": "node scripts/mdx.mjs"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.9",
-		"@astrojs/mdx": "^6.0.1",
-		"@astrojs/rss": "^4.0.18",
+		"@astrojs/check": "^0.9.10",
+		"@astrojs/mdx": "^7.0.5",
+		"@astrojs/rss": "^4.0.19",
 		"@astrojs/sitemap": "^3.7.3",
-		"@yeskunall/astro-umami": "^0.0.8",
-		"astro": "^6.4.2",
-		"astro-embed": "^0.13.0",
+		"@yeskunall/astro-umami": "^0.0.9",
+		"astro": "^7.1.6",
+		"astro-embed": "^0.13.1",
 		"gab-astro-compress": "^0.1.2",
-		"marked": "^18.0.4",
+		"marked": "^18.0.9",
 		"rehype-external-links": "^3.0.0",
-		"sharp": "^0.34.3",
+		"sharp": "^0.35.3",
 		"typescript": "^6.0.3"
 	},
 	"packageManager": "yarn@4.12.0"
