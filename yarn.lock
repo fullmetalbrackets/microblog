@@ -3702,12 +3702,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^18.0.9":
-  version: 18.0.9
-  resolution: "marked@npm:18.0.9"
+"marked@npm:^18.0.11":
+  version: 18.0.11
+  resolution: "marked@npm:18.0.11"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/2fec6c41a8a18f0d9aa6750cd71d8baa7c1abd371e84b04784b735dddf1e581e04bfb37adadeffdb53a3a9e07b1905ab3231cfdf199cc0324edf7b861e3acc46
+  checksum: 10c0/6c2a2bea05974f08f869d591a8eb6aa7fe68e56edbfe74c2d15eea3b85d45aabfea9dada6914d6f4a7917d612059b64eb8b9e5fd190c74ad8ab79c1f48a249b3
   languageName: node
   linkType: hard
 
@@ -3978,7 +3978,7 @@ __metadata:
     astro: "npm:^7.1.6"
     astro-embed: "npm:^0.13.1"
     gab-astro-compress: "npm:^0.1.2"
-    marked: "npm:^18.0.9"
+    marked: "npm:^18.0.11"
     rehype-external-links: "npm:^3.0.0"
     sharp: "npm:^0.35.3"
     typescript: "npm:^6.0.3"
